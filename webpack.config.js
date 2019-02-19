@@ -15,11 +15,15 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'awesome-typescript-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.json$/,
+                use: 'json-loader'
             }
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', 'jsx', '.js']
+        extensions: ['.tsx', '.ts', 'jsx', '.js', 'json']
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
